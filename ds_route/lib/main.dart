@@ -17,13 +17,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes: {
-        '/': (context) => const FirstScreen(),
-        '/second': (context) => const SecondScreen(),
-      },
+      routes: _routes(),
       //home: const MyHomePage(title: 'DS ROUTE'),
     );
   }
+}
+
+_routes() {
+  return {
+    '/': (BuildContext context) => new FirstScreen(),
+    '/second': (BuildContext context) => new SecondScreen()
+  };
 }
 
 class MyHomePage extends StatefulWidget {
